@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ejercicio 1</title>
+        <script type="text/javascript">
+            let frase = "Esta es nuestra frase principal, no es corta, pero tampoco ES larga";
+            let es = '"es"';
+            let ejemplo_match = '"loquebusca"';
+            document.write(frase + "<br>");
+            document.write("<br>");
+            document.write("Primero usaremos el método match(), ejemplo -> resultado=texto.match("+ejemplo_match+")<br>");
+            document.write("Para que haga una búsqueda por 'es' en el string ->" + es + "<br>");
+            resultado1 = frase.match("es");
+            document.write("->" + resultado1 + "<br>");
+            document.write("Ahora haremos lo mismo pero a través de una expresión regular -> /es/<br>");
+            resultado2 = frase.match(/es/);
+            document.write("->" + resultado2 + "<br>");
+            document.write("Repetimos el uso de la expresión regular, pero ahora para hacer una búsqueda global -> /es/g<br>");
+            resultado3 = frase.match(/es/g);
+            document.write("->" + resultado3 + "<br>");
+            document.write("Para terminar con match(), haremos otra búsqueda global, pero siendo un 'caso insensible' -> /es/gi<br>");
+            resultado4 = frase.match(/es/gi);
+            document.write("->" + resultado4 + "<br>");
+            document.write("<br>");
+            document.write("Nuestro siguiente método es el slice(), que nos permite extraer una parte de un string y devolver dicha parte, ejemplo -> resultado=texto.slice(primercaracter,ultimocaracter)<br>");
+            document.write("La parte que escogemos para extraer es (0,6)<br>");
+            resultado5 = frase.slice(0,6);
+            document.write("->" + resultado5 + "<br>");
+            document.write("Si el comienzo es mayor que el final, como en(9,6) , devolverá un string vacío<br>");
+            resultado6 = frase.slice(9,6);
+            document.write(resultado6 + "<- vacío<br>");
+            document.write("Si el comienzo es negativo, empezará a contar hacia atrás desde el final del string(-60,60)<br>");
+            resultado7 = frase.slice(-60,60);
+            document.write("->" + resultado7 + "<br>");
+            document.write("En caso de que el final sea negativo, final = frase.length - Math.abs(final), ejemplo (1,-1)<br>");
+            resultado7 = frase.slice(1,-1);
+            document.write("->" + resultado7 + "<br>");
+            document.write("Si no especificamos un extracto, y simplemente ponemos (8), lo recibirá como el comienzo, y seguirá hasta el final del string<br>");
+            resultado8 = frase.slice(6);
+            document.write("->" + resultado8 + "<br>");
+            document.write("<br>");
+            document.write("El último método es el substring(), que nos permite extraer una parte de un string y devolver dicha parte, ejemplo -> resultado=texto.substring(primercaracter,ultimocaracter)<br><br>");
+            document.write("La parte que escogemos para extraer es (0,6)<br>");
+            resultado9 = frase.substring(0,6);
+            document.write("->" + resultado9 + "<br>");
+            document.write("Si no especificamos un extracto, y simplemente ponemos (8), lo recibirá como el comienzo, y seguirá hasta el final del string<br>");
+            resultado10 = frase.substring(6);
+            document.write("->" + resultado10 + "<br>");
+            document.write("Si el comienzo es mayor que el final, como en(7,0) , se cambian los argumentos<br>");
+            resultado11 = frase.substring(7,0);
+            document.write("->" + resultado11 + "<br>");
+            document.write("En caso de que caulquier argumento dea negativo o NaN, se trata como un 0<br>");
+            resultado12 = frase.substring(-5,2);
+            document.write("->" + resultado12 + "<br>");
+                       
+        </script>
+      </head>
+</html>

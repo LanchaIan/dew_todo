@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ejercicio 1</title>
+        <script type="text/javascript">
+            function funcion_for(){
+                document.write("Esta función durará hasta que nuestra variable alcance el límite establecido<br>");
+                for(let i = 0; i <= 10; i++) {
+                    document.write("Esto se repetirá hasta llegar a 10, vamos por " + i + "<br>");
+                }         
+            }
+            function funcion_foreach(){
+                document.write("La función forEach realiza una función con cada uno de los elementos de una array<br>");
+                let respuesta_correcta = "respuesta3"
+                let array = ["respuesta1", "respuesta2", "respuesta3"];
+                array.forEach(comprobacion);
+                function comprobacion(respuesta) {
+                    if (respuesta == respuesta_correcta) {
+                        document.write("la respuesta correcta es la " + respuesta + "<br>");
+                    }
+                    else {
+                        document.write("la respuesta correcta no es " + respuesta + "<br>");
+                    }
+                }
+            }
+            function funcion_forin(){
+                document.write("La función for in hace un bucle que termina al pasar por todas las propiedades de un array <br>");
+                let persona = {nombre:"Ian", apellido1:"Santana", apellido2:"Angulo"};
+                for (let x in persona) {
+                    document.write(persona[x] + "<br>");
+                }
+            }
+
+            function funcion_forof(){
+                document.write("La función for in hace un bucle que termina al pasar por todas las propiedades de un objeto  <br>");
+                let persona = "juancho";
+                for (let x of persona) {
+                    document.write(x + "<br>");
+                }
+            }
+
+        </script>
+      </head>
+      <body>
+            <button onclick="funcion_for()" >For</button>
+            <button onclick="funcion_foreach()" >forEach</button>
+            <button onclick="funcion_forin()" >for in</button>
+            <button onclick="funcion_forof()" >for of</button>
+      </body>
+</html>

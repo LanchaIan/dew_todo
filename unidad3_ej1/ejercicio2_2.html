@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ejercicio 1</title>
+        <script type="text/javascript">
+            function pregunta(){
+                let resupuesta1 = prompt("Di un número");
+                let resupuesta2 = prompt("Di otro número");
+                document.write(calculo(resupuesta1, resupuesta2));
+            }
+            function calculo(resupuesta1, resupuesta2) {
+                resupuesta1 = parseInt(resupuesta1);
+                resupuesta2 = parseInt(resupuesta2);
+                if (resupuesta1 > resupuesta2) {
+                    alert("Primer valor mayor que el segundo");
+                } else {
+                    resultado = resupuesta1 + resupuesta2;
+                    return(resultado);
+                }
+            }
+        </script>
+      </head>
+      <body>
+            <button onclick="pregunta()" >Click</button>
+      </body>
+</html>

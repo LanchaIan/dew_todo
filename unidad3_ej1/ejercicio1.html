@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ejercicio 1</title>
+        <script type="text/javascript">
+            let resupuesta = prompt("¿Resulado de 20 + 10? =");
+            document.write(calculo(resupuesta));
+            function calculo(resupuesta) {
+                let resultado = (comprobar(resupuesta));
+                return(resultado);
+            };
+
+            function comprobar(resupuesta) {
+                let resultado=30;
+                if (resultado == resupuesta) {
+                    return "acertaste";
+                } else {
+                    return "casi";
+                }
+            }
+        </script>
+      </head>
+</html>

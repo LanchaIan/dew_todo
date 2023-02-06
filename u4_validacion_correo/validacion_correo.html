@@ -1,0 +1,71 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<!-- http://www.lawebdelprogramador.com -->
+
+<html>
+
+<head>
+
+<title>Validar una dirección de correo</title>
+
+<script type="text/javascript">
+
+<!--
+
+/*
+
+ * Función para validar una dirección de correo
+
+ * Tiene que recibir el identificador del formulario
+
+ */
+
+function validateMail(idMail)
+
+{
+
+	//Creamos un objeto 
+
+	object=document.getElementById(idMail);
+
+	valueForm=object.value;
+
+
+	// Patron para el correo
+
+	var patron=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+
+	if(valueForm.search(patron)==0)
+
+	{
+
+		//Mail correcto
+
+		object.style.color="#000";
+
+		return;
+
+	}
+
+	//Mail incorrecto
+	object.style.color="#f00";
+
+}
+
+//-->
+
+</script>
+
+</head>
+
+<body>
+
+<h1>Validar una dirección de correo</h1>
+
+<p>Codigo javascript que muestra como validar una direccion de correo utilizando expresiones regulares con RegExp</p>
+
+<p>Introduce una dirección de correo: <input type='text' id='id_mail' name='mail'  class='' value="" size='30' maxlength='100' title='direccion de correo' onKeyUp="javascript:validateMail('id_mail')" /></p>
+
+</body>
+
+</html>

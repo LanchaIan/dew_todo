@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Ejercicio 1</title>
+        <script type="text/javascript">
+            function pregunta(){
+                let resupuesta = prompt("Di un número");
+                document.write(calculo(resupuesta));
+            }
+            function calculo(resupuesta) {
+                resupuesta = parseInt(resupuesta);
+                let resultado = resupuesta + 1;
+                return(resultado);
+            }
+        </script>
+      </head>
+      <body>
+            <button onclick="pregunta()" >Click</button>
+      </body>
+</html>

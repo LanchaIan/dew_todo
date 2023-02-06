@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El aparcamiento</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="contenido">
+            <h1>Aparcamientos El Rincón &#x1f698</h1>
+            <div>
+                <fieldset>
+                <legend><b>Horarios</b></legend>
+                <p>Entrada: dd/mm/aaaa hh:mm <input type="text" id="entrada" /></p>
+                <p>Salida: dd/mm/aaaa hh:mm <input type="text" id="resultado" readonly /></p>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                <legend><b>Precio</b></legend>
+                <p>Precio: <input type="text" id="precio" readonly /></p>
+                </fieldset>
+            </div>
+            <div>
+                <fieldset>
+                <legend><b>Calcular</b></legend>
+                <br>
+                <input type="button" value="Precio" onclick="resultado()">
+                <input type="button" value="Reiniciar" onclick="resetear()">
+                <br>
+                </fieldset>
+            </div>
+            <p id="error"></p>
+        </div>
+    </div>
+</body>
+</html>
